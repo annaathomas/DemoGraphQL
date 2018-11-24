@@ -1,17 +1,17 @@
-package com.example.DemoGraphQL;
+package com.repo.BookRepoGraphQl;
 
-import com.example.DemoGraphQL.resolver.BookResolver;
-import com.example.DemoGraphQL.resolver.Mutation;
-import com.example.DemoGraphQL.resolver.Query;
+import com.repo.BookRepoGraphQl.resolver.BookResolver;
+import com.repo.BookRepoGraphQl.resolver.Mutation;
+import com.repo.BookRepoGraphQl.resolver.Query;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class DemoGraphQlApplication {
+public class BookRepoGraphQlApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoGraphQlApplication.class, args);
+		SpringApplication.run(BookRepoGraphQlApplication.class, args);
 	}
 
 	@Bean

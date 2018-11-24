@@ -1,8 +1,7 @@
-package com.example.DemoGraphQL;
+package com.repo.BookRepoGraphQl;
 
-import com.example.DemoGraphQL.model.Author;
-import com.example.DemoGraphQL.model.Book;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.repo.BookRepoGraphQl.model.Author;
+import com.repo.BookRepoGraphQl.model.Book;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -32,7 +31,7 @@ public class DataHolder {
          book2.setId(11l);
 
         Author author3 = new Author(22l,"Joseph", "Thomas");
-        Book book3 = new Book("Lod of Rings3","782877",3000, author3);
+        Book book3 = new Book("Lod of Rings3","8899979",3000, author3);
          book3.setId(12l);
 
         authIsAuthMap.put(20l, author1);

@@ -1,11 +1,10 @@
-package com.example.DemoGraphQL.resolver;
+package com.repo.BookRepoGraphQl.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.example.DemoGraphQL.DataHolder;
-import com.example.DemoGraphQL.model.Author;
-import com.example.DemoGraphQL.model.Book;
+import com.repo.BookRepoGraphQl.DataHolder;
+import com.repo.BookRepoGraphQl.model.Author;
+import com.repo.BookRepoGraphQl.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -17,7 +16,6 @@ public class Query implements GraphQLQueryResolver {
 
     public Iterable<Book> findAllBooks() {
         List<Book> books=  dataHolder.getBooks();
-        System.out.println(books);
         return books;
 
     }

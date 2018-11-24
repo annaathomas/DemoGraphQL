@@ -1,4 +1,4 @@
-package com.example.DemoGraphQL;
+package com.repo.BookRepoGraphQl;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

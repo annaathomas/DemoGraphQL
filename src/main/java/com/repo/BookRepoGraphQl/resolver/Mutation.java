@@ -1,12 +1,10 @@
-package com.example.DemoGraphQL.resolver;
+package com.repo.BookRepoGraphQl.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
-import com.example.DemoGraphQL.DataHolder;
-import com.example.DemoGraphQL.model.Author;
-import com.example.DemoGraphQL.model.Book;
+import com.repo.BookRepoGraphQl.DataHolder;
+import com.repo.BookRepoGraphQl.model.Author;
+import com.repo.BookRepoGraphQl.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 
 
 public class Mutation implements GraphQLMutationResolver {
