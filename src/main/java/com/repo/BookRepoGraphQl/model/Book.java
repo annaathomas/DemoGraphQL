@@ -4,12 +4,10 @@ package com.repo.BookRepoGraphQl.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-
+@Getter
+@Setter
 @Entity
 public class Book {
     @Id
@@ -22,39 +20,9 @@ public class Book {
 
     private int pageCount;
 
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL )
+    @JoinColumn(name = "author_id", nullable = true)
     private Author author;
-
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
-    public int getPageCount() {
-        return pageCount;
-    }
-
-    public void setPageCount(int pageCount) {
-        this.pageCount = pageCount;
-    }
-
-    public Author getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public Book() {
     }
@@ -62,12 +30,6 @@ public class Book {
     public Book(String title, String isbn, int pageCount, Author author) {
         this.title = title;
         this.isbn = isbn;
-        this.pageCount = pageCount;
-        this.author = author;
-    }
-
-    public Book(String title,  int pageCount, Author author) {
-        this.title = title;
         this.pageCount = pageCount;
         this.author = author;
     }
@@ -85,24 +47,5 @@ public class Book {
     @Override
     public int hashCode() {
         return id.hashCode();
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", isbn='" + isbn + '\'' +
-                ", pageCount=" + pageCount +
-                ", author=" + author +
-                '}';
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 }
