@@ -20,8 +20,9 @@ public class Book {
 
     private int pageCount;
 
-    @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name = "author_id", nullable = true)
+    @ManyToOne
+    @JoinColumn(name = "author_id",
+            nullable = false, updatable = false)
     private Author author;
 
     public Book() {
