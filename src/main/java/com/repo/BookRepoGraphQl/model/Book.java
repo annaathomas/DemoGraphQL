@@ -20,7 +20,7 @@ public class Book {
 
     private int pageCount;
 
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL )
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "author_id", nullable = true)
     private Author author;
 

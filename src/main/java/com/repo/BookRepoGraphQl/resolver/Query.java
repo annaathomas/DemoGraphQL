@@ -21,7 +21,8 @@ public class Query implements GraphQLQueryResolver {
     private AuthorRepository authorRepository;
 
     public List<Book> findAllBooks() {
-        return (List<Book>) bookRepository.findAll();
+        List<Book> books = (List<Book>) bookRepository.findAll();
+        return books;
     }
 
     public Book findBookByTitle(String title) {
